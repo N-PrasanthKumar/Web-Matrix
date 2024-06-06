@@ -28,7 +28,7 @@ Additional EC2 instances can be deployed to access and utilize the data stored i
 
 ## Architecture Diagram
 
-![Dataflow Architecture Diagram](link-to-diagram)
+![Dataflow Architecture Diagram](https://github.com/N-PrasanthKumar/Web-Matrix/blob/main/ScreenShot/Screenshot%202024-06-06%20213716.png)
 
 ## Usage
 
