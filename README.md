@@ -4,6 +4,11 @@
 
 This documentation outlines the architecture and data flow design for moving data from a web server to a data server using various AWS services. The architecture is designed to be scalable, secure, and flexible, catering to a diverse range of data types and processing needs.
 
+## Architecture Diagram
+
+![Dataflow Architecture Diagram](https://github.com/N-PrasanthKumar/Web-Matrix/blob/main/ScreenShot/Screenshot%202024-06-06%20213716.png)
+
+
 ## Components
 
 ### 1. EC2 Instance (Web Server)
@@ -26,15 +31,4 @@ A read replica of the RDS database is created to offload read queries and distri
 
 Additional EC2 instances can be deployed to access and utilize the data stored in RDS, providing flexibility in data processing and analysis.
 
-## Architecture Diagram
 
-![Dataflow Architecture Diagram](https://github.com/N-PrasanthKumar/Web-Matrix/blob/main/ScreenShot/Screenshot%202024-06-06%20213716.png)
-
-## Usage
-
-```bash
-# Example command to move data from EC2 to S3
-aws s3 cp /path/to/local/file s3://bucket-name/
-
-# Example command to load data from S3 to RDS
-aws rds import-source-into-db-instance --source-db-instance-identifier source-instance --source-region us-west-2 --s3-bucket-name mybucket --s3-prefix myprefix
